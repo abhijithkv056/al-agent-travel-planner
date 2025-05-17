@@ -16,7 +16,7 @@ load_dotenv()
 logfire.configure(send_to_logfire='if-token-present')
 logfire.instrument_openai_agents()
 
-model = os.getenv('MODEL_CHOICE', 'gpt-4o-mini')
+model = os.environ.get('MODEL_CHOICE', 'gpt-4o-mini')
 
 # --- Models for structured outputs ---
 
